@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff;
+        }
+
+        header {
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            padding: 2rem;
+            background: #1f242d;
+            display: flex;
+            justify-content: space-between;
+            /* z-index: 100; */
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 2rem;
+            cursor: default;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin-left: 3rem;
+            transform: 0.3s;
+
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #0ef;
+
+        }
+
+        #menu-icon {
+            color: #fff;
+            font-size: 3rem;
+            display: none;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rm 9% 2rem;
+
+        }
+
+        .img {
+            background-size: cover;
+            height: 60vh;
+            position: absolute;
+            top: 12rem;
+            right: 4rem;
+            mix-blend-mode: lighten;
+            box-shadow: 0 0 3rem #0ef;
+            border-radius: 50%;
+
+
+        }
+
+        .home-contain {
+            position: absolute;
+            left: 10rem;
+            top: 15rem;
+        }
+
+        .home-contain h3 {
+            font-size: 2rem;
+        }
+
+        .home-contain h1 {
+            font-size: 3rem;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-left: 0.5rem;
+            padding: 0.5rem;
+            border: solid #0ef;
+            border-radius: 100%;
+            box-shadow: 0 0 0.5rem #0ef;
+        }
+
+        .social-media a:hover {
+            background-color: #0ef;
+            box-shadow: none;
+        }
+
+        .btn {
+            position: relative;
+            top: 2rem;
+            font-size: 1rem;
+            border: solid #0ef;
+            margin-top: 10rem;
+            padding: 0.5rem;
+            border-radius: 4rem;
+            background-color: #0ef;
+            box-shadow: 0 0 0.5rem #0ef;
+
+
+        }
+
+        span {
+            color: #0ef;
+        }
+
+        /* About Section */
+        #img2 {
+            background-size: cover;
+            height: 60vh;
+            mix-blend-mode: lighten;
+            box-shadow: 0 0 3rem #0ef;
+            border-radius: 50%;
+        }
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+        .about-contain h1{
+            margin-bottom: 0.5rem;
+
+        }
+        .about-contain h3{
+            margin-bottom: 0.5rem;
+
+        }
+        .service h1{
+            
+            margin-bottom: 5rem;
+            text-align: center;
+            text-shadow:0 0 1rem #0ef;
+            
+            
+        }
+        .service-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .service-container .service-box{
+            flex: 1 1 2.5rem;
+            background: #323946;
+            padding: 2rem 1rem 3rem;
+            border-radius: 2rem;
+            text-align: center;
+            border:  solid red;
+
+        }
+        .service h1{
+            font-size: 2rem;
+        }
+        .web{
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0  1rem red;
+        }
+        .portfolio-section{
+            background-color: #323946;
+        }
+
+        .portfolio-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .portfolio-container .portfolio-box{
+            flex: 1 1 1 0.5rem;
+            background: #1f242d;
+            padding: 2rem 1rem 3rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: solid #0ef;
+        }
+       .portfolio-section .heading{
+        text-align: center;
+        margin: 2rem;
+        padding: 1rem;
+       }
+       #boximg{
+        height: 30vh;
+        width: 30vh;
+       }
+            
+        
+
+
+       
+       
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <section>
+            <div class="home-contain">
+                <h3>Hello It's</h3>
+                <h1>Sanket Khule</h1>
+                <h3>And I'm <span>Frontend developer</span></h3>
+
+                <div class="social-media">
+                    <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                    <a href=""><i class='bx bxl-facebook'></i></a>
+                    <a href=""><i class='bx bxl-whatsapp'></i></a>
+                    <a href=""><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <div>
+                    <a href="" class="btn">Open CV</a>
+                </div>
+            </div>
+            <div>
+                <img class="img" src="./portfolio1.jpg" alt="">
+            </div>
+        </section>
+    </header>
+
+    <!-- About Section -->
+    
+<section class="about" id="about">
+    <div class="about-img">
+    <img id="img2" src="./portfolio2.jpg" alt="">
+    </div>
+
+    <div class="about-contain">
+    <h2>About <span>Me</span></h2>
+     <h3>Frontend developer</h3>
+     <p>Highly motivated and detail-oriented BCS graduate with a strong foundation in front-end development. Experienced in creating engaging and intuitive user interfaces using HTML, CSS, and JavaScript. Proficient in translating design concepts into clean, semantic code while adhering to best practices and industry standards. Dedicated to delivering high-quality projects within deadlines. A collaborative team player with excellent communication skills. Seeking an entry-level position as a front-end developer to contribute to cutting-edge web applications and enhance user experiences. </p>
+    <a href="" class="btn">Read More</a>
+    </div>
+    </section>
+    <!-- About Section End-->
+
+
+
+
+    <!-- Services Section Start -->
+    <section class="service" id="service" >
+        <div class="service">
+            <h1>Our <span>Services</span></h1>
+        </div>
+        <div class="service-container">
+            <div class="service-box">
+                <i class='bx bx-code-alt web'></i>
+                <h1>Web-Developer</h1>
+                <p>A collaborative team player with excellent communication skills. Seeking an entry-level position as a front-end developer to contribute to cutting-edge web applications and enhance user experiences.</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-paint web'></i>
+                <h1>Graphic Design</h1>
+                <p>A collaborative team player with excellent communication skills. Seeking an entry-level position as a front-end developer to contribute to cutting-edge web applications and enhance user experiences.</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-photo-album web' ></i>
+                <h1>Photograohy</h1>
+                <p>A collaborative team player with excellent communication skills. Seeking an entry-level position as a front-end developer to contribute to cutting-edge web applications and enhance user experiences.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- portfolio section -->
+<section class="portfolio-section" id="portfolio">
+    <h1 class="heading">Latests <span>projects</span></h1>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img id="boximg" src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" alt="">
+            <h3>Traval</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="https://github.com/sanketkhule123/trval" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Photography</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Gym</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="https://github.com/sanketkhule123/gym" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Weeding</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="https://github.com/sanketkhule123/wedding" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Traval</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Traval</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Traval</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Traval</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+        <div class="portfolio-box">
+            <img id="boximg" src="" alt="">
+            <h3>Traval</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet!</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- portfolio section -->
+</body>
+
+</html>
